@@ -33,7 +33,7 @@ class Command(BaseCommand):
 
         # Leaderboard
         for l in test_leaderboard:
-            Leaderboard.objects.create(user_email=l.get("team", l.get("user_email", "")), score=l["score"])
+            Leaderboard.objects.create(user_email=l.get("user_email", ""), score=l["score"])
 
         # Workouts
         for w in test_workouts:
